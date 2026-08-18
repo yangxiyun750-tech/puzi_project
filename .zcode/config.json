@@ -1,0 +1,127 @@
+{
+  "mcp": {
+    "servers": {
+      "mcp-score": {
+        "command": "npx",
+        "args": ["-y", "@melogen/mcp-score@latest"],
+        "env": {
+          "MELOGEN_API_KEY": "${MELOGEN_API_KEY}"
+        },
+        "enabled": false,
+        "status": "WAITING_FOR_CREDENTIAL",
+        "description": "Melogen score generation / music MCP. Enable only after setting MELOGEN_API_KEY."
+      },
+      "melogen-mcp": {
+        "command": "npx",
+        "args": ["-y", "@melogen/mcp@latest"],
+        "env": {
+          "MELOGEN_API_KEY": "${MELOGEN_API_KEY}"
+        },
+        "enabled": false,
+        "status": "WAITING_FOR_CREDENTIAL",
+        "description": "Melogen official MCP. Enable only after setting MELOGEN_API_KEY."
+      },
+      "github": {
+        "type": "stdio",
+        "command": "D:/puzi_project/.tools/github-mcp-server/github-mcp-server.exe",
+        "args": ["stdio", "--read-only", "--toolsets=repos,issues,pull_requests"],
+        "env": {
+          "GITHUB_READ_ONLY": "true",
+          "GITHUB_TOOLSETS": "repos,issues,pull_requests"
+        },
+        "enabled": false,
+        "description": "Official GitHub MCP Server v1.9.0 (github/github-mcp-server). Binary installed at D:\\puzi_project\\.tools\\github-mcp-server\\github-mcp-server.exe. Read-only mode; toolsets=repos,issues,pull_requests. Requires GITHUB_PERSONAL_ACCESS_TOKEN environment variable (inherited, not written to config)."
+      },
+      "playwright": {
+        "command": "npx",
+        "args": ["-y", "@microsoft/playwright-mcp"],
+        "env": {},
+        "enabled": false,
+        "description": "Microsoft Playwright MCP for browser automation. Requires local browser install."
+      },
+      "zai-mcp-server": {
+        "command": "npx",
+        "args": ["-y", "zai-mcp-server"],
+        "env": {
+          "ZAI_API_KEY": "${ZAI_API_KEY}"
+        },
+        "enabled": false,
+        "description": "Z.ai MCP server. Requires ZAI_API_KEY environment variable."
+      },
+      "web-search-prime": {
+        "command": "npx",
+        "args": ["-y", "web-search-prime"],
+        "env": {
+          "WEB_SEARCH_PRIME_API_KEY": "${WEB_SEARCH_PRIME_API_KEY}"
+        },
+        "enabled": false,
+        "description": "Web search MCP. Requires provider API key."
+      },
+      "web-reader": {
+        "command": "npx",
+        "args": ["-y", "web-reader-mcp"],
+        "env": {
+          "WEB_READER_API_KEY": "${WEB_READER_API_KEY}"
+        },
+        "enabled": false,
+        "description": "Web reader MCP. Requires provider API key."
+      },
+      "mcp-musescore": {
+        "command": "npx",
+        "args": ["-y", "mcp-musescore"],
+        "env": {},
+        "enabled": false,
+        "description": "Community MuseScore MCP. Disabled by default; MuseScore CLI is already available."
+      },
+      "dorico-mcp-server": {
+        "command": "npx",
+        "args": ["-y", "dorico-mcp-server"],
+        "env": {
+          "DORICO_LICENSE": "${DORICO_LICENSE}"
+        },
+        "enabled": false,
+        "description": "Dorico MCP server. Disabled by default; requires Dorico license."
+      }
+    }
+  },
+  "hooks": {
+    "enabled": false
+  },
+  "skills": {
+    "enabled_profiles": ["OMR"],
+    "profiles": {
+      "CORE_DEV": {
+        "enabled": [],
+        "deferred": [
+          "systematic-debugging",
+          "test-driven-development",
+          "verification-before-completion",
+          "writing-plans"
+        ]
+      },
+      "OMR": {
+        "enabled": [
+          "score-reconstruction-v2"
+        ],
+        "deferred": [
+          "omr-benchmark",
+          "musicxml-qa"
+        ]
+      },
+      "SCORE_EDIT": {
+        "enabled": [],
+        "deferred": [
+          "score-generate",
+          "score-export"
+        ]
+      },
+      "FRONTEND": {
+        "enabled": [],
+        "deferred": [
+          "frontend-design",
+          "webapp-testing"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,702 @@
+{
+  "date": "2026-08-18T07:39:36.007146+00:00",
+  "provider": "synthetic",
+  "total_cases": 22,
+  "status_counts": {
+    "PASS": 13,
+    "INVALID_TARGET": 4,
+    "UNSUPPORTED": 2,
+    "NEEDS_CLARIFICATION": 3
+  },
+  "results": [
+    {
+      "case_id": "WS-01",
+      "category": "whole_score_interval",
+      "input_text": "把整首升大二度",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "ready",
+      "operation": "interval",
+      "target_part": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "measure_range": [
+        1,
+        50
+      ],
+      "interval_or_basis": "+M2",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "export_success": true,
+      "reimport_success": true,
+      "semantic_verification": [
+        "affected_pitches_moved",
+        "chord_tones_uniform",
+        "grace_notes_present",
+        "rest_count_unchanged",
+        "voice_durations_unchanged",
+        "key_signatures_transposed",
+        "unaffected_parts_unchanged",
+        "reimport_note_count_matches"
+      ],
+      "latency_ms": 74.80979996034876,
+      "failure_stage": "",
+      "error_reason": "",
+      "error_detail": ""
+    },
+    {
+      "case_id": "WS-02",
+      "category": "whole_score_interval",
+      "input_text": "整首降小三度",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "ready",
+      "operation": "interval",
+      "target_part": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "measure_range": [
+        1,
+        50
+      ],
+      "interval_or_basis": "-m3",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "export_success": true,
+      "reimport_success": true,
+      "semantic_verification": [
+        "affected_pitches_moved",
+        "chord_tones_uniform",
+        "grace_notes_present",
+        "rest_count_unchanged",
+        "voice_durations_unchanged",
+        "key_signatures_transposed",
+        "unaffected_parts_unchanged",
+        "reimport_note_count_matches"
+      ],
+      "latency_ms": 85.05890000378713,
+      "failure_stage": "",
+      "error_reason": "",
+      "error_detail": ""
+    },
+    {
+      "case_id": "WS-03",
+      "category": "whole_score_interval",
+      "input_text": "全曲升高一个八度",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "ready",
+      "operation": "interval",
+      "target_part": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "measure_range": [
+        1,
+        50
+      ],
+      "interval_or_basis": "+P8",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "export_success": true,
+      "reimport_success": true,
+      "semantic_verification": [
+        "affected_pitches_moved",
+        "chord_tones_uniform",
+        "grace_notes_present",
+        "rest_count_unchanged",
+        "voice_durations_unchanged",
+        "key_signatures_transposed",
+        "unaffected_parts_unchanged",
+        "reimport_note_count_matches"
+      ],
+      "latency_ms": 74.3953000055626,
+      "failure_stage": "",
+      "error_reason": "",
+      "error_detail": ""
+    },
+    {
+      "case_id": "PS-01",
+      "category": "part_specific",
+      "input_text": "把长号升高一个八度",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "ready",
+      "operation": "interval",
+      "target_part": [
+        "P3"
+      ],
+      "measure_range": [
+        1,
+        50
+      ],
+      "interval_or_basis": "+P8",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "export_success": true,
+      "reimport_success": true,
+      "semantic_verification": [
+        "affected_pitches_moved",
+        "chord_tones_uniform",
+        "grace_notes_present",
+        "rest_count_unchanged",
+        "voice_durations_unchanged",
+        "key_signatures_transposed",
+        "unaffected_parts_unchanged",
+        "reimport_note_count_matches"
+      ],
+      "latency_ms": 73.08890001149848,
+      "failure_stage": "",
+      "error_reason": "",
+      "error_detail": ""
+    },
+    {
+      "case_id": "PS-02",
+      "category": "part_specific",
+      "input_text": "把第一小号升大二度",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "ready",
+      "operation": "interval",
+      "target_part": [
+        "P1"
+      ],
+      "measure_range": [
+        1,
+        50
+      ],
+      "interval_or_basis": "+M2",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "export_success": true,
+      "reimport_success": true,
+      "semantic_verification": [
+        "affected_pitches_moved",
+        "chord_tones_uniform",
+        "grace_notes_present",
+        "rest_count_unchanged",
+        "voice_durations_unchanged",
+        "key_signatures_transposed",
+        "unaffected_parts_unchanged",
+        "reimport_note_count_matches"
+      ],
+      "latency_ms": 74.05819999985397,
+      "failure_stage": "",
+      "error_reason": "",
+      "error_detail": ""
+    },
+    {
+      "case_id": "PS-03",
+      "category": "part_specific",
+      "input_text": "把第二小号降半音",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "ready",
+      "operation": "interval",
+      "target_part": [
+        "P2"
+      ],
+      "measure_range": [
+        1,
+        50
+      ],
+      "interval_or_basis": "-m2",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "export_success": true,
+      "reimport_success": true,
+      "semantic_verification": [
+        "affected_pitches_moved",
+        "chord_tones_uniform",
+        "grace_notes_present",
+        "rest_count_unchanged",
+        "voice_durations_unchanged",
+        "key_signatures_transposed",
+        "unaffected_parts_unchanged",
+        "reimport_note_count_matches"
+      ],
+      "latency_ms": 73.46290000714362,
+      "failure_stage": "",
+      "error_reason": "",
+      "error_detail": ""
+    },
+    {
+      "case_id": "MR-01",
+      "category": "measure_range",
+      "input_text": "把第12到24小节升大二度",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "ready",
+      "operation": "interval",
+      "target_part": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "measure_range": [
+        12,
+        24
+      ],
+      "interval_or_basis": "+M2",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "export_success": true,
+      "reimport_success": true,
+      "semantic_verification": [
+        "affected_pitches_moved",
+        "chord_tones_uniform",
+        "grace_notes_present",
+        "rest_count_unchanged",
+        "voice_durations_unchanged",
+        "key_signatures_transposed",
+        "unaffected_parts_unchanged",
+        "reimport_note_count_matches"
+      ],
+      "latency_ms": 78.7646000389941,
+      "failure_stage": "",
+      "error_reason": "",
+      "error_detail": ""
+    },
+    {
+      "case_id": "MR-02",
+      "category": "measure_range",
+      "input_text": "第32小节到最后降一个全音",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "ready",
+      "operation": "interval",
+      "target_part": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "measure_range": [
+        32,
+        50
+      ],
+      "interval_or_basis": "-M2",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "export_success": true,
+      "reimport_success": true,
+      "semantic_verification": [
+        "affected_pitches_moved",
+        "chord_tones_uniform",
+        "grace_notes_present",
+        "rest_count_unchanged",
+        "voice_durations_unchanged",
+        "key_signatures_transposed",
+        "unaffected_parts_unchanged",
+        "reimport_note_count_matches"
+      ],
+      "latency_ms": 78.60889995936304,
+      "failure_stage": "",
+      "error_reason": "",
+      "error_detail": ""
+    },
+    {
+      "case_id": "MR-03",
+      "category": "measure_range",
+      "input_text": "前8小节升半音",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "ready",
+      "operation": "interval",
+      "target_part": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "measure_range": [
+        1,
+        8
+      ],
+      "interval_or_basis": "+m2",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "export_success": true,
+      "reimport_success": true,
+      "semantic_verification": [
+        "affected_pitches_moved",
+        "chord_tones_uniform",
+        "grace_notes_present",
+        "rest_count_unchanged",
+        "voice_durations_unchanged",
+        "key_signatures_transposed",
+        "unaffected_parts_unchanged",
+        "reimport_note_count_matches"
+      ],
+      "latency_ms": 75.4828000208363,
+      "failure_stage": "",
+      "error_reason": "",
+      "error_detail": ""
+    },
+    {
+      "case_id": "PM-01",
+      "category": "part_measure_range",
+      "input_text": "把长号第12到24小节升大二度",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "ready",
+      "operation": "interval",
+      "target_part": [
+        "P3"
+      ],
+      "measure_range": [
+        12,
+        24
+      ],
+      "interval_or_basis": "+M2",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "export_success": true,
+      "reimport_success": true,
+      "semantic_verification": [
+        "affected_pitches_moved",
+        "chord_tones_uniform",
+        "grace_notes_present",
+        "rest_count_unchanged",
+        "voice_durations_unchanged",
+        "key_signatures_transposed",
+        "unaffected_parts_unchanged",
+        "reimport_note_count_matches"
+      ],
+      "latency_ms": 72.19110004371032,
+      "failure_stage": "",
+      "error_reason": "",
+      "error_detail": ""
+    },
+    {
+      "case_id": "PM-02",
+      "category": "part_measure_range",
+      "input_text": "第二小号第5到10小节降半音",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "ready",
+      "operation": "interval",
+      "target_part": [
+        "P2"
+      ],
+      "measure_range": [
+        5,
+        10
+      ],
+      "interval_or_basis": "-m2",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "export_success": true,
+      "reimport_success": true,
+      "semantic_verification": [
+        "affected_pitches_moved",
+        "chord_tones_uniform",
+        "grace_notes_present",
+        "rest_count_unchanged",
+        "voice_durations_unchanged",
+        "key_signatures_transposed",
+        "unaffected_parts_unchanged",
+        "reimport_note_count_matches"
+      ],
+      "latency_ms": 86.43099997425452,
+      "failure_stage": "",
+      "error_reason": "",
+      "error_detail": ""
+    },
+    {
+      "case_id": "IT-01",
+      "category": "instrument_transposition",
+      "input_text": "把Bb小号改成实际音高",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "ready",
+      "operation": "written_to_sounding",
+      "target_part": [
+        "P1"
+      ],
+      "measure_range": [
+        1,
+        50
+      ],
+      "interval_or_basis": "written_to_sounding",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "export_success": true,
+      "reimport_success": true,
+      "semantic_verification": [
+        "affected_pitches_moved",
+        "chord_tones_uniform",
+        "grace_notes_present",
+        "rest_count_unchanged",
+        "voice_durations_unchanged",
+        "key_signatures_transposed",
+        "unaffected_parts_unchanged",
+        "reimport_note_count_matches"
+      ],
+      "latency_ms": 59.029299998655915,
+      "failure_stage": "",
+      "error_reason": "",
+      "error_detail": ""
+    },
+    {
+      "case_id": "IT-02",
+      "category": "instrument_transposition",
+      "input_text": "把实际音高改成Bb小号记谱",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "ready",
+      "operation": "sounding_to_written",
+      "target_part": [
+        "P1"
+      ],
+      "measure_range": [
+        1,
+        50
+      ],
+      "interval_or_basis": "sounding_to_written",
+      "expected_status": "PASS",
+      "actual_status": "PASS",
+      "export_success": true,
+      "reimport_success": true,
+      "semantic_verification": [
+        "affected_pitches_moved",
+        "chord_tones_uniform",
+        "grace_notes_present",
+        "rest_count_unchanged",
+        "voice_durations_unchanged",
+        "key_signatures_transposed",
+        "unaffected_parts_unchanged",
+        "reimport_note_count_matches"
+      ],
+      "latency_ms": 66.5770000196062,
+      "failure_stage": "",
+      "error_reason": "",
+      "error_detail": ""
+    },
+    {
+      "case_id": "IT-03",
+      "category": "instrument_transposition",
+      "input_text": "把F圆号改成实际音高",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "invalid",
+      "operation": null,
+      "target_part": [],
+      "measure_range": [
+        null,
+        null
+      ],
+      "interval_or_basis": "",
+      "expected_status": "INVALID_TARGET",
+      "actual_status": "INVALID_TARGET",
+      "export_success": false,
+      "reimport_success": false,
+      "semantic_verification": [],
+      "latency_ms": 0.3434999962337315,
+      "failure_stage": "resolver",
+      "error_reason": "Could not find a part matching '圆号'.",
+      "error_detail": ""
+    },
+    {
+      "case_id": "KY-01",
+      "category": "key_target",
+      "input_text": "把整首移到降E大调",
+      "provider_model": "synthetic",
+      "intent_status": "unsupported",
+      "resolver_status": "unsupported",
+      "operation": null,
+      "target_part": [],
+      "measure_range": [
+        null,
+        null
+      ],
+      "interval_or_basis": "",
+      "expected_status": "UNSUPPORTED",
+      "actual_status": "UNSUPPORTED",
+      "export_success": false,
+      "reimport_success": false,
+      "semantic_verification": [],
+      "latency_ms": 0.03809999907389283,
+      "failure_stage": "resolver",
+      "error_reason": "Target-key transposition is not supported in V1.",
+      "error_detail": ""
+    },
+    {
+      "case_id": "KY-02",
+      "category": "key_target",
+      "input_text": "把这段移成D大调",
+      "provider_model": "synthetic",
+      "intent_status": "unsupported",
+      "resolver_status": "unsupported",
+      "operation": null,
+      "target_part": [],
+      "measure_range": [
+        null,
+        null
+      ],
+      "interval_or_basis": "",
+      "expected_status": "UNSUPPORTED",
+      "actual_status": "UNSUPPORTED",
+      "export_success": false,
+      "reimport_success": false,
+      "semantic_verification": [],
+      "latency_ms": 0.030399998649954796,
+      "failure_stage": "resolver",
+      "error_reason": "Target-key transposition is not supported in V1.",
+      "error_detail": ""
+    },
+    {
+      "case_id": "AM-01",
+      "category": "ambiguity",
+      "input_text": "后面一点降一点",
+      "provider_model": "synthetic",
+      "intent_status": "needs_clarification",
+      "resolver_status": "needs_clarification",
+      "operation": null,
+      "target_part": [],
+      "measure_range": [
+        null,
+        null
+      ],
+      "interval_or_basis": "",
+      "expected_status": "NEEDS_CLARIFICATION",
+      "actual_status": "NEEDS_CLARIFICATION",
+      "export_success": false,
+      "reimport_success": false,
+      "semantic_verification": [],
+      "latency_ms": 0.03579998156055808,
+      "failure_stage": "resolver",
+      "error_reason": "请说明具体音程。",
+      "error_detail": ""
+    },
+    {
+      "case_id": "AM-02",
+      "category": "ambiguity",
+      "input_text": "把小号调高一点",
+      "provider_model": "synthetic",
+      "intent_status": "needs_clarification",
+      "resolver_status": "needs_clarification",
+      "operation": null,
+      "target_part": [],
+      "measure_range": [
+        null,
+        null
+      ],
+      "interval_or_basis": "",
+      "expected_status": "NEEDS_CLARIFICATION",
+      "actual_status": "NEEDS_CLARIFICATION",
+      "export_success": false,
+      "reimport_success": false,
+      "semantic_verification": [],
+      "latency_ms": 0.027799978852272034,
+      "failure_stage": "resolver",
+      "error_reason": "Which trumpet?",
+      "error_detail": ""
+    },
+    {
+      "case_id": "AM-03",
+      "category": "ambiguity",
+      "input_text": "第二段降一点",
+      "provider_model": "synthetic",
+      "intent_status": "needs_clarification",
+      "resolver_status": "needs_clarification",
+      "operation": null,
+      "target_part": [],
+      "measure_range": [
+        null,
+        null
+      ],
+      "interval_or_basis": "",
+      "expected_status": "NEEDS_CLARIFICATION",
+      "actual_status": "NEEDS_CLARIFICATION",
+      "export_success": false,
+      "reimport_success": false,
+      "semantic_verification": [],
+      "latency_ms": 0.02970005152747035,
+      "failure_stage": "resolver",
+      "error_reason": "请说明具体音程与小节范围。",
+      "error_detail": ""
+    },
+    {
+      "case_id": "HL-01",
+      "category": "hallucination",
+      "input_text": "把不存在的圆号升八度",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "invalid",
+      "operation": null,
+      "target_part": [],
+      "measure_range": [
+        null,
+        null
+      ],
+      "interval_or_basis": "",
+      "expected_status": "INVALID_TARGET",
+      "actual_status": "INVALID_TARGET",
+      "export_success": false,
+      "reimport_success": false,
+      "semantic_verification": [],
+      "latency_ms": 0.09070005035027862,
+      "failure_stage": "resolver",
+      "error_reason": "Could not find a part matching '圆号'.",
+      "error_detail": ""
+    },
+    {
+      "case_id": "HL-02",
+      "category": "hallucination",
+      "input_text": "把第999小节升大二度",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "invalid",
+      "operation": null,
+      "target_part": [],
+      "measure_range": [
+        null,
+        null
+      ],
+      "interval_or_basis": "",
+      "expected_status": "INVALID_TARGET",
+      "actual_status": "INVALID_TARGET",
+      "export_success": false,
+      "reimport_success": false,
+      "semantic_verification": [],
+      "latency_ms": 0.08479994721710682,
+      "failure_stage": "resolver",
+      "error_reason": "Invalid measure range: measure_not_found:999",
+      "error_detail": ""
+    },
+    {
+      "case_id": "HL-03",
+      "category": "hallucination",
+      "input_text": "把第三小号第10小节升半音",
+      "provider_model": "synthetic",
+      "intent_status": "ready",
+      "resolver_status": "needs_clarification",
+      "operation": null,
+      "target_part": [],
+      "measure_range": [
+        null,
+        null
+      ],
+      "interval_or_basis": "",
+      "expected_status": "INVALID_TARGET",
+      "actual_status": "INVALID_TARGET",
+      "export_success": false,
+      "reimport_success": false,
+      "semantic_verification": [],
+      "latency_ms": 0.0771000050008297,
+      "failure_stage": "resolver",
+      "error_reason": "'第三小号' matches multiple parts: P1 Trumpet 1, P2 Trumpet 2. Please specify which one.",
+      "error_detail": ""
+    }
+  ]
+}

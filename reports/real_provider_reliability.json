@@ -1,0 +1,142 @@
+{
+  "date": "2026-08-18T03:55:42.949543",
+  "provider": "https://duoyuanx.com/v1/chat/completions",
+  "model": "kimi-k3",
+  "capabilities": {
+    "temperature": false,
+    "max_tokens": true,
+    "response_format": true,
+    "tool_calls": true,
+    "system_role": true
+  },
+  "iterations_per_case": 1,
+  "summaries": [
+    {
+      "text": "把不存在的圆号升八度",
+      "iterations": 1,
+      "success": 0,
+      "provider_error": 0,
+      "needs_clarification": 0,
+      "invalid": 1,
+      "unsupported": 0,
+      "recovered_by_retry": 0,
+      "error_reason_counts": {},
+      "malformed_json_subtype_counts": {
+        "json_in_reasoning_content": 1
+      },
+      "avg_latency_ms": 22044.228,
+      "p95_latency_ms": 22044.228,
+      "min_latency_ms": 22044.228,
+      "max_latency_ms": 22044.228
+    }
+  ],
+  "runs": [
+    {
+      "iteration": 1,
+      "text": "把不存在的圆号升八度",
+      "resolver_status": "invalid",
+      "error_reason": "",
+      "malformed_json_subtype": "json_in_reasoning_content",
+      "total_latency_ms": 22044.228,
+      "clarification_question": "Could not find a part matching '圆号'.",
+      "intent_dict": {
+        "status": "needs_clarification",
+        "operation": "transpose",
+        "direction": "up",
+        "interval_description": "八度",
+        "part_description": "圆号",
+        "measure_start_description": null,
+        "measure_end_description": null,
+        "is_all_parts": false,
+        "basis": null,
+        "clarification_question": "当前乐谱中没有“圆号”这一声部，可用声部为 Trumpet 1、Trombone、Piano。请问您想将哪个声部升八度？",
+        "confidence": 0.4,
+        "source_text": "把不存在的圆号升八度",
+        "error_reason": ""
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 17667.097,
+          "http_status": 200,
+          "exception_type": null,
+          "is_timeout": false,
+          "response_body_empty": true,
+          "content_empty": false,
+          "has_reasoning_content": true,
+          "has_tool_calls": false,
+          "json_parse_failed": true,
+          "source_field": "reasoning_content",
+          "extraction_action": "completely_invalid",
+          "raw_content_head": "The user request is in Chinese: \"把不存在的圆号升八度\" which translates to \"Transpose the non-existent French horn up an octave.\"\n\nBreaking it down:\n- 把...升八度 = transpose ... up an octave\n- 不存在的圆号 = the non-existent French horn\n\nThe part \"圆号\" (French horn) doesn't exist in the available parts. Available parts\n...\nme reconsider: maybe they want needs_clarification because the referenced part cannot be resolved. But \"invalid\" exists in the enum for a reason — likely for references to nonexistent parts or out-of-range measures. So invalid fits.\n\nconfidence: high that it's invalid, 0.95.\n\ninterval_description: \"",
+          "raw_content_tail": "",
+          "reasoning_content_head": "",
+          "reasoning_content_tail": "",
+          "response_body_head": "{\"id\":\"89519c9b-03db-42e5-9169-805ffd93dcbb\",\"object\":\"chat.completion\",\"created\":1786996538,\"model\":\"moonshotai/Kimi-K3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"reasoning_content\":\"The user request is in Chinese: \\\"把不存在的圆号升八度\\\" which translates to \\\"Transpose the non-exist\n...\n it's invalid, 0.95.\\n\\ninterval_description: \\\"\",\"tool_calls\":null},\"logprobs\":null,\"finish_reason\":\"length\",\"matched_stop\":null}],\"usage\":{\"prompt_tokens\":690,\"total_tokens\":1714,\"completion_tokens\":1024,\"prompt_tokens_details\":null,\"reasoning_tokens\":1027},\"metadata\":{\"weight_version\":\"default\"}}",
+          "response_body_tail": "",
+          "finish_reason": "length",
+          "model": "moonshotai/Kimi-K3",
+          "usage": {
+            "prompt_tokens": 690,
+            "total_tokens": 1714,
+            "completion_tokens": 1024,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 1027
+          },
+          "extracted_json": {},
+          "error_reason": "malformed_json",
+          "error_detail": "AI response was not valid JSON (json_in_reasoning_content)",
+          "malformed_json_subtype": "json_in_reasoning_content"
+        },
+        {
+          "attempt": 2,
+          "latency_ms": 4373.843,
+          "http_status": 200,
+          "exception_type": null,
+          "is_timeout": false,
+          "response_body_empty": true,
+          "content_empty": false,
+          "has_reasoning_content": true,
+          "has_tool_calls": false,
+          "json_parse_failed": false,
+          "source_field": "content",
+          "extraction_action": "none",
+          "raw_content_head": "{\"status\":\"needs_clarification\",\"operation\":\"transpose\",\"direction\":\"up\",\"interval_description\":\"八度\",\"part_description\":\"圆号\",\"measure_start_description\":null,\"measure_end_description\":null,\"is_all_parts\":false,\"basis\":null,\"clarification_question\":\"当前乐谱中没有“圆号”这一声部，可用声部为 Trumpet 1、Trombone、Piano。请问您想将哪个声部升八度？\",\"confidence\":0.4}",
+          "raw_content_tail": "",
+          "reasoning_content_head": "",
+          "reasoning_content_tail": "",
+          "response_body_head": "{\"id\":\"0d445ed9-ccc1-40e2-9072-9e814c8ce7bd\",\"object\":\"chat.completion\",\"created\":1786996542,\"model\":\"moonshotai/Kimi-K3\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"status\\\":\\\"needs_clarification\\\",\\\"operation\\\":\\\"transpose\\\",\\\"direction\\\":\\\"up\\\",\\\"interval_description\\\":\\\"八度\\\n...\nce maybe 0.4.\\n\\nReturn JSON only.\",\"tool_calls\":null},\"logprobs\":null,\"finish_reason\":\"stop\",\"matched_stop\":163586}],\"usage\":{\"prompt_tokens\":690,\"total_tokens\":1020,\"completion_tokens\":330,\"prompt_tokens_details\":{\"cached_tokens\":64},\"reasoning_tokens\":228},\"metadata\":{\"weight_version\":\"default\"}}",
+          "response_body_tail": "",
+          "finish_reason": "stop",
+          "model": "moonshotai/Kimi-K3",
+          "usage": {
+            "prompt_tokens": 690,
+            "total_tokens": 1020,
+            "completion_tokens": 330,
+            "prompt_tokens_details": {
+              "cached_tokens": 64
+            },
+            "reasoning_tokens": 228
+          },
+          "extracted_json": {
+            "status": "needs_clarification",
+            "operation": "transpose",
+            "direction": "up",
+            "interval_description": "八度",
+            "part_description": "圆号",
+            "measure_start_description": null,
+            "measure_end_description": null,
+            "is_all_parts": false,
+            "basis": null,
+            "clarification_question": "当前乐谱中没有“圆号”这一声部，可用声部为 Trumpet 1、Trombone、Piano。请问您想将哪个声部升八度？",
+            "confidence": 0.4
+          },
+          "error_reason": "",
+          "error_detail": "",
+          "malformed_json_subtype": ""
+        }
+      ],
+      "recovered_by_retry": false
+    }
+  ]
+}

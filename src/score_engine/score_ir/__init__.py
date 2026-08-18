@@ -1,0 +1,56 @@
+"""ScoreIR — Intermediate Representation for musical scores.
+
+V1: Unified data model for reconstruction, editing, and round-trip validation.
+"""
+
+from .score_ir import (
+    Score,
+    Part,
+    Instrument,
+    InstrumentTransposition,
+    Staff,
+    Measure,
+    Voice,
+    Note,
+    Rest,
+    Chord,
+    Pitch,
+    Duration,
+    KeySignature,
+    TimeSignature,
+    Clef,
+    Tempo,
+    Dynamic,
+    Articulation,
+    Tie,
+    Slur,
+    Lyric,
+    ScoreEdit,
+    EditHistory,
+)
+
+__all__ = [
+    "Score",
+    "Part",
+    "Instrument",
+    "InstrumentTransposition",
+    "Staff",
+    "Measure",
+    "Voice",
+    "Note",
+    "Rest",
+    "Chord",
+    "Pitch",
+    "Duration",
+    "KeySignature",
+    "TimeSignature",
+    "Clef",
+    "Tempo",
+    "Dynamic",
+    "Articulation",
+    "Tie",
+    "Slur",
+    "Lyric",
+    "ScoreEdit",
+    "EditHistory",
+]

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Orchestral Score Rebuild"
+  short_description: "Rebuild, transpose, and QA orchestral scores"
+  default_prompt: "Use $orchestral-score-rebuild to reconstruct this printed orchestral score, transpose it to the requested concert key, and export a validated score and linked parts."

@@ -1,0 +1,32 @@
+{
+  "name": "ai-score-toolkit",
+  "version": "0.1.0",
+  "description": "Project-level plugin for AI-assisted score reconstruction, editing, and QA.",
+  "skills": [
+    ".zcode/skills"
+  ],
+  "commands": ".zcode/commands",
+  "mcpServers": ".zcode/mcp",
+  "agents": ".zcode/agents",
+  "metadata": {
+    "frozen_components": [
+      "src/ai/intent_parser.py",
+      "src/ai/intent_resolver.py",
+      "src/ai/intent_validator.py",
+      "src/ai/intent_schema.py",
+      "src/ai/json_extraction.py",
+      "src/ai/openai_compatible_client.py",
+      "src/ai/provider_capability.py",
+      "src/ai/provider_diagnostics.py",
+      "src/score_engine/transposition/engine.py",
+      "src/score_engine/transposition/interval.py",
+      "src/score_engine/transposition/request.py",
+      "src/score_engine/transposition/pitch_spelling.py",
+      "src/score_engine/score_ir/score_ir.py",
+      "src/score_engine/musicxml"
+    ],
+    "third_party_capabilities": {
+      "note": "All third-party capabilities (skills, MCPs, apps) are referenced by source URL/license and are not vendored into this plugin."
+    }
+  }
+}

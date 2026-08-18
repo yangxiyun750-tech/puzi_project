@@ -1,0 +1,141 @@
+# =============================================================================
+# puzi_project — Git upload safety rules
+# Purpose: exclude credentials, copyrighted scores, generated artifacts,
+#          local tools, caches, and IDE/ZCode local state.
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Local tools / downloaded third-party binaries
+# ---------------------------------------------------------------------------
+.tools/
+*.zip
+*.exe
+*.tar.gz
+*.tar.xz
+*.tgz
+
+# ---------------------------------------------------------------------------
+# Python environment / caches
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+
+# ---------------------------------------------------------------------------
+# Credentials / secrets / environment files
+# ---------------------------------------------------------------------------
+.env
+.env.*
+*.env
+credentials*
+secrets*
+*.key
+*.pem
+*.pfx
+*.p12
+
+# ---------------------------------------------------------------------------
+# IDE / editor local state
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ---------------------------------------------------------------------------
+# ZCode / agent local state (keep config templates and skills)
+# ---------------------------------------------------------------------------
+.zcode/plans/
+.zcode/**/*.log
+.agents/**/*.log
+.agents/**/*.pdf
+
+# ---------------------------------------------------------------------------
+# Runtime logs
+# ---------------------------------------------------------------------------
+logs/
+*.log
+
+# ---------------------------------------------------------------------------
+# Generated outputs / caches / benchmark artifacts
+# ---------------------------------------------------------------------------
+outputs/
+benchmark/
+
+# Per-score working directories containing copyrighted source material,
+# Audiveris OMR output, MuseScore files, rendered images, and QA artifacts.
+colores_test/
+colores_v2/
+final_production/
+full_score_original_rebuilt/
+LOGIC_PRO_DELIVERY/
+prototype_pages_1_2/
+
+# Common generated sub-directories across output trees
+*/previews/
+*/source_pages/
+*/qa_crops/
+*/rendered/
+*/omr/
+
+# ---------------------------------------------------------------------------
+# Score file formats (source scans and generated exports)
+# ---------------------------------------------------------------------------
+*.pdf
+*.mscz
+*.mscx
+*.omr
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.wav
+*.mp3
+*.mp4
+*.mov
+
+# Root-level named score exports
+天使的脸*.musicxml
+天使的脸*.pdf
+天使的脸*.mscz
+天使的脸*.mscx
+天使的脸*.png
+Colores*.pdf
+Colores*.musicxml
+Colores*.mscz
+Colores*.mscx
+
+# ---------------------------------------------------------------------------
+# Keep project source / safe config templates (explicit allow-list)
+# ---------------------------------------------------------------------------
+!src/
+!tests/
+!docs/
+!rules/
+!frontend/
+!web_api/
+!licensing/
+!reports/
+!AGENTS.md
+!requirements.txt
+!.zcode/config.json
+!.zcode/skills/
+!.zcode-plugin/
+!.agents/skills/orchestral-score-rebuild/

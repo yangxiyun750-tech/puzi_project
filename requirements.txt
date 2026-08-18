@@ -1,0 +1,10 @@
+# Core runtime dependencies (existing)
+lxml>=6.1.1
+numpy>=2.5.2
+pillow>=12.3.0
+pypdf>=6.16.0
+
+# Score engine / QA toolchain (Phase 1)
+music21>=10.5.0
+partitura>=1.9.0
+musicdiff>=5.2
