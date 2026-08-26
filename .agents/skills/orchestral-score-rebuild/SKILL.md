@@ -32,6 +32,14 @@ Use E-flat spelling, not enharmonic D-sharp major. If explicitly used for anothe
 
 Keep the original PDF unchanged. Separate `source_pages/`, `omr/`, `baseline/`, `final/previews/`, `final/parts/`, and `qa/`. Capture tool versions and exact commands in `QA_REPORT.md`. Check each installed tool's local help before relying on flags.
 
+## Follow the validated stage gates
+
+Read `references/successful-run-procedure.md` before production and apply `assets/PRODUCTION_STAGE_GATES_QA.md`. These files preserve the environment gate, original-key two-page prototype, real-instrument mapping, native Chinese Lyrics and Harp objects, pre-transposition verification, linked-part persistence, and MusicXML round-trip steps that previously existed only in conversation history.
+
+Do not bypass a gate silently. Record any user-authorized scope change and its QA consequence. Deterministic scripts may prove structure and file invariants, but they do not replace visual review or human musical judgment for ambiguous notation.
+
+Before any source score is processed, run python -m score_rebuild doctor (or .\score-rebuild.cmd doctor) and the separate capability-doctor. Stop on an environment FAIL. Never treat an unverified visual provider as available; route visual QA to the declared human reviewer instead.
+
 ## Render the source PDF
 
 1. Inspect the combined PDF and isolate the full-score page range. Exclude covers, blanks, and old part pages from the OMR book.
@@ -153,6 +161,6 @@ Retain the Audiveris `.omr` and correction artifacts. Verify every required file
 
 - Use `scripts/make_audiveris_playlist.py` to create the naturally sorted compound-book playlist.
 - Use `scripts/musicxml_invariants.py` to compare baseline and final MusicXML while ignoring expected pitch values.
+- Read `references/successful-run-procedure.md` and apply `assets/PRODUCTION_STAGE_GATES_QA.md`.
 - Read `references/qa-protocol.md` during page-by-page and final QA.
 - Copy and fill `assets/QA_REPORT_TEMPLATE.md`.
-

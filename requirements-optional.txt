@@ -1,0 +1,6 @@
+# Optional helpers; not required by the canonical ScoreRebuild runtime.
+
+# Used only by retained legacy/advanced PDF text-extraction helpers. The
+# historical scripts that currently import it are private-fixture-specific and
+# are not the open-source runtime entry point.
+pdfplumber>=0.11.9,<1

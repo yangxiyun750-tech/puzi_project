@@ -1,10 +1,12 @@
-# Core runtime dependencies (existing)
-lxml>=6.1.1
-numpy>=2.5.2
-pillow>=12.3.0
-pypdf>=6.16.0
+# ScoreRebuild V0.1 candidate — required runtime dependencies.
+# Supported interpreter: Python >=3.12,<3.13.
 
-# Score engine / QA toolchain (Phase 1)
-music21>=10.5.0
-partitura>=1.9.0
-musicdiff>=5.2
+lxml>=6.1.1,<7
+numpy>=2.5.2,<3
+Pillow>=12.3.0,<13
+pypdf>=6.16.0,<7
+music21>=10.5.0,<11
+partitura>=1.9.0,<2
+musicdiff>=5.2,<6
+pypdfium2>=5.13.0,<6
+PyMuPDF>=1.24,<2

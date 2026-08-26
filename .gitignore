@@ -126,6 +126,11 @@ Colores*.mscx
 # Keep project source / safe config templates (explicit allow-list)
 # ---------------------------------------------------------------------------
 !src/
+!src/omr/
+!src/omr/**
+# The source allow-list above must not re-include generated Python caches.
+src/omr/**/__pycache__/
+src/omr/**/*.py[cod]
 !tests/
 !docs/
 !rules/
@@ -139,3 +144,34 @@ Colores*.mscx
 !.zcode/skills/
 !.zcode-plugin/
 !.agents/skills/orchestral-score-rebuild/
+
+# ---------------------------------------------------------------------------
+# Phase 0.5 reproducibility boundary
+# ---------------------------------------------------------------------------
+# Local OMR/model virtual environments
+.venv_homr/
+.venv_oemer/
+
+# Per-run workspaces, synthetic smoke artifacts, and temporary audit clones
+workdir/
+.tmp/
+tmp_rest_test*.musicxml
+orchestral_rebuild_*/
+
+# Benchmark outputs are generated; benchmark source/config belongs elsewhere.
+benchmarks/
+
+# MusicXML schema is acquired from the pinned official revision and verified
+# locally. Provenance/setup are tracked in docs/MUSICXML_SCHEMA_SETUP.md.
+third_party/musicxml_4_0/schema/
+
+# Generated Phase 2+/benchmark reports that are not V0.1 runtime inputs.
+reports/CHOPIN_*
+reports/fidelity_recovery_*
+reports/multi_omr_benchmark_*
+reports/musicxml_normalization_*
+reports/normalization_v1_summary.json
+reports/phase4b_*
+reports/reconstruction_pipeline_v1.md
+reports/recovery_router_v1.md
+reports/reference_fidelity_audit.md
