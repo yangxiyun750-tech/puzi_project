@@ -451,17 +451,32 @@ def main() -> int:
     source = Path(sys.argv[1])
     workdir = Path(sys.argv[2])
 
-    # Use known tool paths
+    try:
+        from score_rebuild.doctor import resolve_manifest_binary
+
+        audiveris_exe = resolve_manifest_binary("audiveris")
+        musescore_exe = resolve_manifest_binary("musescore")
+        poppler_exe = resolve_manifest_binary("pdftoppm")
+    except (ImportError, KeyError) as exc:
+        print(f"environment discovery unavailable: {exc}")
+        return 1
+
+    missing = [
+        name
+        for name, executable in (("Audiveris", audiveris_exe), ("MuseScore", musescore_exe), ("pdftoppm", poppler_exe))
+        if executable is None
+    ]
+    if missing:
+        print(f"missing required executable(s): {', '.join(missing)}; run: python -m score_rebuild doctor")
+        return 1
+
     pipeline = ReconstructionPipeline(
         source_pdf=source,
         workdir=workdir,
         project_name=source.stem.replace(" ", "_"),
-        audiveris_exe=Path("C:/Program Files/Audiveris/Audiveris.exe"),
-        musescore_exe=Path("C:/Program Files/MuseScore 4/bin/MuseScore4.exe"),
-        poppler_exe=Path(
-            "C:/Users/Seven Yang/.cache/codex-runtimes/codex-primary-runtime/"
-            "dependencies/native/poppler/Library/bin/pdftoppm.exe"
-        ),
+        audiveris_exe=audiveris_exe,
+        musescore_exe=musescore_exe,
+        poppler_exe=poppler_exe,
     )
 
     results = pipeline.run()

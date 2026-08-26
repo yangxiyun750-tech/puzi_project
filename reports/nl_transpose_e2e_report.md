@@ -37,7 +37,7 @@
 - **Warnings**: []
 - **Quality Gate**: clean (allows=True)
 - **Export OK**: True
-- **MuseScore import**: True (MuseScore imported to C:\Users\SEVENY~1\AppData\Local\Temp\tmpo2kt1_sk\transposed.mscz)
+- **MuseScore import**: True (MuseScore imported to `<SYSTEM_TEMP>/transposed.mscz`)
 - **Music correctness checks**: ['affected_pitches_moved', 'chord_tones_uniform', 'grace_notes_present', 'rest_count_unchanged', 'voice_durations_unchanged', 'key_signatures_transposed', 'unaffected_parts_unchanged', 'unaffected_measures_unchanged', 'original_immutable', 'reimport_note_count_matches']
 
 ### 把整首降小三度
@@ -51,7 +51,7 @@
 - **Warnings**: []
 - **Quality Gate**: clean (allows=True)
 - **Export OK**: True
-- **MuseScore import**: True (MuseScore imported to C:\Users\SEVENY~1\AppData\Local\Temp\tmpwg_jajyh\transposed.mscz)
+- **MuseScore import**: True (MuseScore imported to `<SYSTEM_TEMP>/transposed.mscz`)
 - **Music correctness checks**: ['affected_pitches_moved', 'chord_tones_uniform', 'grace_notes_present', 'rest_count_unchanged', 'voice_durations_unchanged', 'key_signatures_transposed', 'unaffected_parts_unchanged', 'unaffected_measures_unchanged', 'original_immutable', 'reimport_note_count_matches']
 
 ### 把长号升一个八度
@@ -65,7 +65,7 @@
 - **Warnings**: []
 - **Quality Gate**: clean (allows=True)
 - **Export OK**: True
-- **MuseScore import**: True (MuseScore imported to C:\Users\SEVENY~1\AppData\Local\Temp\tmpfjtfap29\transposed.mscz)
+- **MuseScore import**: True (MuseScore imported to `<SYSTEM_TEMP>/transposed.mscz`)
 - **Music correctness checks**: ['affected_pitches_moved', 'chord_tones_uniform', 'grace_notes_present', 'rest_count_unchanged', 'voice_durations_unchanged', 'key_signatures_transposed', 'unaffected_parts_unchanged', 'unaffected_measures_unchanged', 'original_immutable', 'reimport_note_count_matches']
 
 ### 把第32到48小节的小号升大二度
@@ -79,7 +79,7 @@
 - **Warnings**: []
 - **Quality Gate**: clean (allows=True)
 - **Export OK**: True
-- **MuseScore import**: True (MuseScore imported to C:\Users\SEVENY~1\AppData\Local\Temp\tmpce43hk13\transposed.mscz)
+- **MuseScore import**: True (MuseScore imported to `<SYSTEM_TEMP>/transposed.mscz`)
 - **Music correctness checks**: ['affected_pitches_moved', 'chord_tones_uniform', 'grace_notes_present', 'rest_count_unchanged', 'voice_durations_unchanged', 'key_signatures_transposed', 'unaffected_parts_unchanged', 'unaffected_measures_unchanged', 'original_immutable', 'reimport_note_count_matches']
 
 ### 把降B小号的记谱音高升大二度
@@ -93,7 +93,7 @@
 - **Warnings**: []
 - **Quality Gate**: clean (allows=True)
 - **Export OK**: True
-- **MuseScore import**: True (MuseScore imported to C:\Users\SEVENY~1\AppData\Local\Temp\tmpd0_dmmsq\transposed.mscz)
+- **MuseScore import**: True (MuseScore imported to `<SYSTEM_TEMP>/transposed.mscz`)
 - **Music correctness checks**: ['affected_pitches_moved', 'chord_tones_uniform', 'grace_notes_present', 'rest_count_unchanged', 'voice_durations_unchanged', 'key_signatures_transposed', 'unaffected_parts_unchanged', 'unaffected_measures_unchanged', 'original_immutable', 'reimport_note_count_matches']
 
 ### Transpose Trumpet 1 down a perfect fifth
@@ -107,7 +107,7 @@
 - **Warnings**: []
 - **Quality Gate**: clean (allows=True)
 - **Export OK**: True
-- **MuseScore import**: True (MuseScore imported to C:\Users\SEVENY~1\AppData\Local\Temp\tmpa3d4exha\transposed.mscz)
+- **MuseScore import**: True (MuseScore imported to `<SYSTEM_TEMP>/transposed.mscz`)
 - **Music correctness checks**: ['affected_pitches_moved', 'chord_tones_uniform', 'grace_notes_present', 'rest_count_unchanged', 'voice_durations_unchanged', 'key_signatures_transposed', 'unaffected_parts_unchanged', 'unaffected_measures_unchanged', 'original_immutable', 'reimport_note_count_matches']
 
 ## Clarification Cases

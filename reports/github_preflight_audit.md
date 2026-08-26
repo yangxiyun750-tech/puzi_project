@@ -1,6 +1,6 @@
 # GitHub 上传前安全审计报告
 
-**项目**: `D:\puzi_project`  
+**项目**: `<REPOSITORY_ROOT>`
 **日期**: 2026-08-18  
 **审计范围**: 本地文件、Git 状态、敏感信息扫描、`.gitignore` 配置  
 **限制**: 未创建远程仓库、未 push、未删除任何本地文件
@@ -13,7 +13,7 @@
 
 **需要注意的保留项**:
 - `reports/real_provider_history.jsonl` 与 `reports/real_provider_reliability.json` 中保留了真实 K3  provider 返回的 JSON 内容（中文文本、JSON 结构），**不含 API key/token**，但属于原始推理/响应数据。如你希望更严格脱敏，可额外将其加入 `.gitignore`，我不会删除它们。
-- `.zcode/config.json` 中所有 token 均为 `${ENV_VAR}` 占位符，未写入真实值，但包含一条指向本机二进制路径 `D:/puzi_project/.tools/github-mcp-server/github-mcp-server.exe`。该路径在项目目录内、无用户名等个人信息，可作为团队共享模板，但需要每位成员在相同位置放置二进制或使用各自环境覆盖。
+- `.zcode/config.json` 中所有 token 均为 `${ENV_VAR}` 占位符，未写入真实值。可选 GitHub MCP 使用 `github-mcp-server` 命令名，由 PATH 或客户端配置解析；不依赖仓库内本机二进制路径。
 
 ---
 

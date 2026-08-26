@@ -70,6 +70,16 @@ def resolve_binary(spec: dict[str, Any]) -> Path | None:
     return None
 
 
+def resolve_manifest_binary(binary_id: str, manifest: dict[str, Any] | None = None) -> Path | None:
+    """Resolve one declared executable using the canonical doctor precedence."""
+
+    data = manifest or load_manifest()
+    for spec in data.get("required_binaries", []):
+        if spec.get("id") == binary_id:
+            return resolve_binary(spec)
+    raise KeyError(f"Unknown required binary id: {binary_id}")
+
+
 def _run_version(executable: Path, args: Iterable[str], timeout: int = 25) -> tuple[bool, str, str]:
     try:
         completed = subprocess.run(

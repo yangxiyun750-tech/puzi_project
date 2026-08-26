@@ -1,6 +1,6 @@
 # Project Handoff — Current State
 
-**Project**: `D:\puzi_project`  
+**Project**: `<REPOSITORY_ROOT>`
 **Date**: 2026-08-17  
 **Status**: Development paused. Diagnostics infrastructure ready; next implementation step not yet executed.
 
@@ -11,7 +11,7 @@
 The project is a deterministic music-score transposition pipeline with an optional natural-language (NL) front end backed by an OpenAI-compatible LLM.
 
 ```
-D:\puzi_project
+<REPOSITORY_ROOT>
 ├── src/
 │   ├── ai/                          # NL intent parsing + provider diagnostics
 │   │   ├── __init__.py              # AIClient, AIRequest, AIResponse, AIProviderError
@@ -210,7 +210,7 @@ $env:LLM_API_KEY="your_key"
 $env:LLM_MODEL="kimi-k2-6"
 $env:LLM_BASE_URL="your_relay_url"   # optional
 $env:PYTHONPATH="src"
-cd D:\puzi_project
+cd <REPOSITORY_ROOT>
 python run_real_provider_reliability.py --case "把整首升大二度" --iterations 10
 ```
 
@@ -232,7 +232,7 @@ Replace `your_key`, `kimi-k2-6`, and `your_relay_url` with real values locally. 
 
 ## 15. Baseline Tests to Run Before Starting Next Work
 
-From project root (`D:\puzi_project`):
+From project root (`<REPOSITORY_ROOT>`):
 
 ```powershell
 $env:PYTHONPATH="src"

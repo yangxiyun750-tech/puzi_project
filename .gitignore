@@ -166,6 +166,14 @@ benchmarks/
 third_party/musicxml_4_0/schema/
 
 # Generated Phase 2+/benchmark reports that are not V0.1 runtime inputs.
+
+# Private-fixture-derived root reports are preserved locally but never tracked.
+/QA_REPORT.md
+/EVIDENCE_TRIAGE_REPORT.md
+/MEASURE_LOCALIZATION_REPORT.md
+/ROOT_CAUSE_REPORT.md
+/VISUAL_RECOVERY_REPORT.md
+
 reports/CHOPIN_*
 reports/fidelity_recovery_*
 reports/multi_omr_benchmark_*

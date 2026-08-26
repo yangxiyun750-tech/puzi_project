@@ -441,10 +441,12 @@ class MusicXMLImporter:
 
 
 def test_import() -> None:
-    path = Path("D:/puzi_project/colores_test/baseline/colores_audiveris_raw.musicxml")
-    if not path.exists():
-        print(f"SKIP: {path} not found")
+    from score_rebuild.private_fixture import print_private_fixture_status
+
+    fixture = print_private_fixture_status()
+    if not fixture.available or fixture.path is None:
         return
+    path = fixture.path
 
     importer = MusicXMLImporter()
     score = importer.import_file(path)

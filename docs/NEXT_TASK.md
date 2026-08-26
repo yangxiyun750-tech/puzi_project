@@ -65,7 +65,7 @@ $env:LLM_API_KEY="your_key"
 $env:LLM_MODEL="kimi-k2-6"
 $env:LLM_BASE_URL="your_relay_url"   # optional
 $env:PYTHONPATH="src"
-cd D:\puzi_project
+cd <REPOSITORY_ROOT>
 python -m unittest discover tests -v
 python run_real_provider_reliability.py --case "把整首升大二度" --iterations 10
 ```

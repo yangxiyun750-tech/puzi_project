@@ -337,13 +337,17 @@ class RoundtripValidator:
 
 
 def test_roundtrip() -> None:
+    from score_rebuild.private_fixture import private_fixture_output_dir, print_private_fixture_status
+
+    fixture = print_private_fixture_status()
+    if not fixture.available or fixture.path is None:
+        return
+
     from src.musicxml.musicxml_to_score_ir import MusicXMLImporter
     from src.musicxml.score_ir_to_musicxml import MusicXMLExporter
-
-    path = Path("D:/puzi_project/colores_test/baseline/colores_audiveris_raw.musicxml")
-    if not path.exists():
-        print(f"SKIP: {path} not found")
-        return
+    path = fixture.path
+    output_dir = private_fixture_output_dir()
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     # Import
     importer = MusicXMLImporter()
@@ -352,7 +356,7 @@ def test_roundtrip() -> None:
     # Export
     exporter = MusicXMLExporter()
     tree = exporter.export(original)
-    rt_path = Path("D:/puzi_project/colores_test/baseline/colores_score_ir_roundtrip.musicxml")
+    rt_path = output_dir / "score_ir_roundtrip.musicxml"
     tree.write(rt_path, encoding="utf-8", xml_declaration=True)
 
     # Re-import
@@ -361,13 +365,13 @@ def test_roundtrip() -> None:
     # Validate
     validator = RoundtripValidator()
     report = validator.validate(original, roundtrip)
-    report.save_json("D:/puzi_project/colores_test/qa/ROUNDTRIP_SCORE_IR.json")
-    report.save_markdown("D:/puzi_project/colores_test/qa/ROUNDTRIP_SCORE_IR.md")
+    report.save_json(output_dir / "ROUNDTRIP_SCORE_IR.json")
+    report.save_markdown(output_dir / "ROUNDTRIP_SCORE_IR.md")
 
     print(f"Status: {report.status}")
     print(f"Errors: {len(report.errors())}")
     print(f"Warnings: {len(report.warnings())}")
-    print(f"Report: D:/puzi_project/colores_test/qa/ROUNDTRIP_SCORE_IR.md")
+    print(f"Report: {output_dir / 'ROUNDTRIP_SCORE_IR.md'}")
 
 
 if __name__ == "__main__":

@@ -9,6 +9,7 @@ from pathlib import Path
 from .capabilities import capability_exit_code, print_capability_results, run_capability_doctor
 from .doctor import environment_exit_code, print_results, run_environment_doctor
 from .manifest import load_manifest
+from .private_fixture import print_private_fixture_status
 from .schema import install_schema, verify_schema
 from .smoke import run_smoke_test
 
@@ -42,6 +43,10 @@ def _parser() -> argparse.ArgumentParser:
     smoke.add_argument("--keep-workdir", action="store_true")
 
     subparsers.add_parser("manifest", help="Print the machine-readable installation manifest.")
+    subparsers.add_parser(
+        "private-fixture-status",
+        help="Report optional private golden-fixture configuration; absence is a successful skip.",
+    )
     return parser
 
 
@@ -88,5 +93,9 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "manifest":
         print(json.dumps(load_manifest(), indent=2, ensure_ascii=False))
         return 0
+    if args.command == "private-fixture-status":
+        print_private_fixture_status()
+        return 0
+
 
     raise AssertionError(f"Unhandled command: {args.command}")

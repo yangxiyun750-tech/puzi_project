@@ -1,6 +1,6 @@
 # ZCode Capability Inventory
 
-**Project**: `D:\puzi_project`  
+**Project**: `<REPOSITORY_ROOT>`
 **Date**: 2026-08-18  
 **Phase**: AI Score Toolkit / ZCode Capability Integration Phase 1  
 **Status**: Audit complete; GitHub MCP installed, awaiting `GITHUB_TOKEN`
@@ -49,7 +49,7 @@
 ### A.3 Project Layout
 
 ```text
-D:\puzi_project
+<REPOSITORY_ROOT>
 ├── .agents/skills/orchestral-score-rebuild/   # legacy score skill
 ├── .zcode/                                     # ZCode workspace config
 │   ├── config.json                             # MCP templates + skill profiles
@@ -98,7 +98,7 @@ D:\puzi_project
 | User commands (compat) | `~/.agents/commands/` | missing |
 | User AGENTS.md | `~/.zcode/AGENTS.md` | missing |
 
-**Workspace scope (`D:\puzi_project\.zcode/`)**:
+**Workspace scope (`<REPOSITORY_ROOT>/.zcode/`)**:
 
 | Resource | Path | Status |
 |---|---|---|
@@ -447,7 +447,7 @@ Artifacts were written to an isolated temp directory and left for inspection.
 
 ### K.7.5 GitHub MCP Health Check
 
-Server: `D:\puzi_project\.tools\github-mcp-server\github-mcp-server.exe` (official release v1.9.0)
+Server command: `github-mcp-server` (resolved by PATH or client configuration; official release v1.9.0)
 
 | Check | Result |
 |---|---|
