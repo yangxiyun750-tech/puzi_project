@@ -16,7 +16,7 @@ Status: audited, **not frozen**
 [REQUIRED] User intent + source PDF + declared full-score page range
     |
     v
-[REQUIRED] project-local orchestral-score-rebuild Skill
+[REQUIRED] project-local focused-score-rebuild Skill
     |
     +--> [REQUIRED] successful-run stage-gate reference
     +--> [REQUIRED] QA protocol + QA report template
@@ -130,7 +130,7 @@ Status: audited, **not frozen**
 ## Skill and integration branch
 
 ```text
-[REQUIRED] orchestral-score-rebuild (project local)
+[REQUIRED] focused-score-rebuild (project local)
 
 [DEVELOPMENT ONLY] skill-creator
     +--> authored/updated the runtime Skill

@@ -54,7 +54,7 @@ Result: `PASS`
 
 Tracked and present in the clone:
 
-- `.agents/skills/orchestral-score-rebuild/SKILL.md`
+- `.agents/skills/focused-score-rebuild/SKILL.md`
 - `references/qa-protocol.md`
 - `references/successful-run-procedure.md`
 - `assets/QA_REPORT_TEMPLATE.md`

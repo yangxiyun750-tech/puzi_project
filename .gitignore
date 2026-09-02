@@ -143,7 +143,7 @@ src/omr/**/*.py[cod]
 !.zcode/config.json
 !.zcode/skills/
 !.zcode-plugin/
-!.agents/skills/orchestral-score-rebuild/
+!.agents/skills/focused-score-rebuild/
 
 # ---------------------------------------------------------------------------
 # Phase 0.5 reproducibility boundary

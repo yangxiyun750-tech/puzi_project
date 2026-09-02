@@ -1,6 +1,6 @@
 # ScoreRebuild Windows 安装指南
 
-适用对象：希望把印刷管弦乐总谱 PDF 重建成可编辑 MuseScore 工程、但不熟悉编程的音乐教师。
+适用对象：希望把清晰印刷的单旋律、基础声乐钢琴谱或基础管乐团总谱重建成可编辑 MuseScore 工程、但不熟悉编程的音乐教师。
 
 本指南只安装和检查环境，不会处理您的乐谱。
 
@@ -11,7 +11,7 @@
 ```text
 score-rebuild-manifest.json
 score-rebuild.cmd
-.agents\skills\orchestral-score-rebuild\SKILL.md
+.agents\skills\focused-score-rebuild\SKILL.md
 ```
 
 以下命令都在这个项目目录中运行。
@@ -69,12 +69,14 @@ py -3.12 -m venv .venv
 唯一入口是：
 
 ```text
-.agents\skills\orchestral-score-rebuild\SKILL.md
+.agents\skills\focused-score-rebuild\SKILL.md
 ```
 
 - ZCode：项目配置已经提供 `SCORE_REBUILD` profile，只启用这个 Skill。
-- Codex：打开项目根目录，确认任务中能看到 `orchestral-score-rebuild`；使用时明确写 `$orchestral-score-rebuild`。
+- Codex：打开项目根目录，确认任务中能看到 `focused-score-rebuild`；使用时明确写 `$focused-score-rebuild`。
 - 其他 WorkBuddy 风格 Agent：让它在执行前完整阅读上面的 `SKILL.md` 和其中直接引用的文件。
+
+旧入口 `orchestral-score-rebuild` 已更名为 `focused-score-rebuild`，不再作为可发现 Skill 保留。升级旧环境时请更新保存的提示词和配置；历史审计文档中的旧名称仍代表当时的真实运行记录。
 
 不需要手工依次调用多个内部 Skill。不同 Agent 的兼容说明见 `docs/AGENT_INTEGRATION.md`。
 
@@ -140,4 +142,4 @@ Audiveris 和 Java 的实际 CLI 启动由 doctor 检查。这个 smoke test 不
 - smoke test 通过；
 - 您有权处理输入 PDF。
 
-然后只向 Agent 提交一个入口请求：使用 `orchestral-score-rebuild`。不要跳过 Skill 中的 prototype、原调核对和人工歧义处理阶段。
+然后只向 Agent 提交一个入口请求：使用 `focused-score-rebuild`。不要跳过 Skill 中的 prototype、原调核对和人工歧义处理阶段。

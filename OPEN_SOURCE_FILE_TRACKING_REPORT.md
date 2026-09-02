@@ -16,9 +16,9 @@ Scope: Phase 0.5 only. Classification is based on `git status --short` and `git 
 
 | Path/group | Why |
 | --- | --- |
-| `.agents/skills/orchestral-score-rebuild/SKILL.md` | Canonical, agent-neutral workflow contract (already tracked; modified). |
-| `.agents/skills/orchestral-score-rebuild/assets/PRODUCTION_STAGE_GATES_QA.md` | Runtime QA stage gates. |
-| `.agents/skills/orchestral-score-rebuild/references/successful-run-procedure.md` | Reproduction/run procedure referenced by Skill and manifest. |
+| `.agents/skills/focused-score-rebuild/SKILL.md` | Canonical, agent-neutral workflow contract (already tracked; modified). |
+| `.agents/skills/focused-score-rebuild/assets/PRODUCTION_STAGE_GATES_QA.md` | Runtime QA stage gates. |
+| `.agents/skills/focused-score-rebuild/references/successful-run-procedure.md` | Reproduction/run procedure referenced by Skill and manifest. |
 | `.gitignore` | Protects private scores and generated/runtime-local artifacts. |
 | `.zcode/config.json` | Optional ZCode integration; only the canonical `SCORE_REBUILD` profile is enabled. |
 | `AGENTS.md` | Agent-neutral discovery and canonical Skill declaration. |

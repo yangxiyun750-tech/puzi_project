@@ -15,4 +15,4 @@ Audit date: 2026-08-25
 
 `<USER_HOME>/.agents/skills` is empty in the current filesystem scan. A 2026-08-23 ZCode audit recorded `<USER_HOME>/.agents/skills/open-design` as a symlink to the Codex user Skill; it is no longer present and had no score invocation evidence.
 
-Global directories are mutable machine state. The reproducible runtime must use the tracked project-local `orchestral-score-rebuild` rather than depend on any of these paths.
+Global directories are mutable machine state. The reproducible runtime must use the tracked project-local `focused-score-rebuild` rather than depend on any of these paths.

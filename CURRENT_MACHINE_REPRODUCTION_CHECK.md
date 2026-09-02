@@ -43,7 +43,7 @@ Verified components:
 | Audiveris | PASS | 5.11.0; `C:\Program Files\Audiveris\Audiveris.exe` |
 | MuseScore Studio | PASS | 4.7.4; `C:\Program Files\MuseScore 4\bin\MuseScore4.exe` |
 | Audiveris Java | PASS | OpenJDK 25.0.3; Audiveris bundled runtime |
-| Project Skill/resources | PASS | canonical project-local `orchestral-score-rebuild` Skill |
+| Project Skill/resources | PASS | canonical project-local `focused-score-rebuild` Skill |
 | MusicXML schema | PASS | pinned MusicXML 4.0 files; all SHA-256 values match |
 | Project and temporary writes | PASS | create/write/delete probe succeeded |
 

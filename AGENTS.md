@@ -2,19 +2,19 @@
 
 ## V0.1 Scope
 
-The V0.1 candidate preserves the validated printed-orchestral-score workflow. Do not implement V0.2 automatic review/repair, change musical reconstruction behavior, or process private scores while working on reproducibility infrastructure.
+The current candidate supports the focused clear-print workflow defined by `focused-score-rebuild`: monophonic melody, solo voice with basic piano accompaniment, and basic concert band. Do not broaden it to orchestral, handwritten, damaged, or highly complex notation without a separately approved scope change. Do not process private scores while working on reproducibility infrastructure.
 
 ## Canonical user-facing Skill
 
 The canonical default is the single project-local Skill:
 
 ```text
-.agents/skills/orchestral-score-rebuild/SKILL.md
+.agents/skills/focused-score-rebuild/SKILL.md
 ```
 
 Users invoke one ScoreRebuild workflow. The Skill owns stage ordering and directly references its QA/procedure resources. Do not require users to manually chain internal Skills.
 
-The core repository is coding-agent-neutral. ZCode configuration is an optional compatibility layer, not a runtime dependency. In ZCode, the default `SCORE_REBUILD` profile enables only `orchestral-score-rebuild`. All other profiles are explicit development, benchmark, legacy-comparison, or future-pipeline choices and remain disabled by default.
+The core repository is coding-agent-neutral. ZCode configuration is an optional compatibility layer, not a runtime dependency. In ZCode, the default `SCORE_REBUILD` profile enables only `focused-score-rebuild`. All other profiles are explicit development, benchmark, legacy-comparison, or future-pipeline choices and remain disabled by default.
 
 ## Frozen Components
 

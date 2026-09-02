@@ -62,15 +62,26 @@
   ],
   "required_internal_skills": [
     {
-      "name": "orchestral-score-rebuild",
-      "path": ".agents/skills/orchestral-score-rebuild/SKILL.md",
+      "name": "focused-score-rebuild",
+      "path": ".agents/skills/focused-score-rebuild/SKILL.md",
       "resources": [
-        ".agents/skills/orchestral-score-rebuild/references/qa-protocol.md",
-        ".agents/skills/orchestral-score-rebuild/references/successful-run-procedure.md",
-        ".agents/skills/orchestral-score-rebuild/assets/QA_REPORT_TEMPLATE.md",
-        ".agents/skills/orchestral-score-rebuild/assets/PRODUCTION_STAGE_GATES_QA.md",
-        ".agents/skills/orchestral-score-rebuild/scripts/make_audiveris_playlist.py",
-        ".agents/skills/orchestral-score-rebuild/scripts/musicxml_invariants.py"
+        ".agents/skills/focused-score-rebuild/agents/openai.yaml",
+        ".agents/skills/focused-score-rebuild/references/intake-and-library-classification.md",
+        ".agents/skills/focused-score-rebuild/references/multilingual-metadata.md",
+        ".agents/skills/focused-score-rebuild/references/human-review-dialogue.md",
+        ".agents/skills/focused-score-rebuild/references/review-issue-schema.md",
+        ".agents/skills/focused-score-rebuild/references/qa-protocol.md",
+        ".agents/skills/focused-score-rebuild/references/successful-run-procedure.md",
+        ".agents/skills/focused-score-rebuild/references/windows-toolchain-bootstrap.md",
+        ".agents/skills/focused-score-rebuild/assets/QA_REPORT_TEMPLATE.md",
+        ".agents/skills/focused-score-rebuild/assets/PRODUCTION_STAGE_GATES_QA.md",
+        ".agents/skills/focused-score-rebuild/assets/windows-toolchain-manifest.json",
+        ".agents/skills/focused-score-rebuild/scripts/bootstrap_tools.ps1",
+        ".agents/skills/focused-score-rebuild/scripts/library_catalog.py",
+        ".agents/skills/focused-score-rebuild/scripts/make_audiveris_playlist.py",
+        ".agents/skills/focused-score-rebuild/scripts/metadata_record.py",
+        ".agents/skills/focused-score-rebuild/scripts/review_queue.py",
+        ".agents/skills/focused-score-rebuild/scripts/musicxml_invariants.py"
       ]
     }
   ],

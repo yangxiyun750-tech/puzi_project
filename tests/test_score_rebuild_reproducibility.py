@@ -29,7 +29,7 @@ class ManifestTests(unittest.TestCase):
     def test_manifest_has_one_runtime_skill_and_no_skill_creator(self) -> None:
         manifest = load_manifest()
         names = [entry["name"] for entry in manifest["required_internal_skills"]]
-        self.assertEqual(names, ["orchestral-score-rebuild"])
+        self.assertEqual(names, ["focused-score-rebuild"])
         self.assertNotIn("skill-creator", json.dumps(manifest["required_internal_skills"]))
 
     def test_confirmed_dependency_classification(self) -> None:

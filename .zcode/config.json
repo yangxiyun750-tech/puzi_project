@@ -126,21 +126,21 @@
       "OMR_LEGACY_COMPARE": {
         "enabled": [
           "score-reconstruction-v2",
-          "orchestral-score-rebuild",
+          "focused-score-rebuild",
           "musicxml-qa"
         ],
         "deferred": [],
-        "note": "Controlled A/B comparison profile (2026-08-23). orchestral-score-rebuild resolves natively from .agents/skills/orchestral-score-rebuild/SKILL.md (legacy Codex skill, reference-only). Not a production default; superseded by OMR_FULL for production routing."
+        "note": "The profile name is retained for configuration compatibility. focused-score-rebuild replaces the former orchestral-score-rebuild ID and resolves from .agents/skills/focused-score-rebuild/SKILL.md."
       },
       "OMR_FULL": {
         "enabled": [
           "score-reconstruction-v2",
           "musicxml-qa",
-          "orchestral-score-rebuild",
+          "focused-score-rebuild",
           "score-export"
         ],
         "deferred": [],
-        "note": "Candidate production score pipeline (2026-08-23). Stage routing: source PDF -> score-reconstruction-v2 (PRIMARY_RECONSTRUCTION) -> musicxml-qa (CORE_QA) -> orchestral-score-rebuild (POST_RECONSTRUCTION_REFERENCE_VERIFICATION_AND_REPAIR; must NOT rerun completed full OMR) -> musicxml-qa -> score-export (DELIVERY, only after QA pass). Existing OMR profile objects are preserved."
+        "note": "Composite production profile. When reconstruction already exists, focused-score-rebuild supplies source verification and human QA only and must not rerun completed OMR. For the single user-facing workflow use SCORE_REBUILD."
       },
       "OMR_BENCHMARK": {
         "enabled": [
@@ -188,10 +188,10 @@
       },
       "SCORE_REBUILD": {
         "enabled": [
-          "orchestral-score-rebuild"
+          "focused-score-rebuild"
         ],
         "deferred": [],
-        "note": "Optional ZCode compatibility profile for the agent-neutral V0.1 entry point. Enables exactly one user-facing Skill; all internal/development profiles require explicit selection."
+        "note": "Default single user-facing workflow for eligible clear printed scores. Enables focused-score-rebuild only; internal and development profiles require explicit selection."
       }
     }
   }

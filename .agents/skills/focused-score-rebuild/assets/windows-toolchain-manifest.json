@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "policy": {
+    "require_sha256": true,
+    "allow_unlisted_urls": false,
+    "official_fallback_default": false,
+    "download_requires_approval": true,
+    "install_requires_approval": true
+  },
+  "tools": [
+    {
+      "id": "python",
+      "display_name": "Python 3.12",
+      "version": "3.12.x",
+      "override_env": "PYTHON_EXE",
+      "detect": {
+        "command_names": ["python.exe", "python"],
+        "candidate_paths": [
+          "{LOCALAPPDATA}/Programs/Python/Python312/python.exe",
+          "{PROGRAMFILES}/Python312/python.exe"
+        ],
+        "version_args": ["--version"],
+        "version_pattern": "Python 3\\.12\\."
+      },
+      "package": {
+        "source_status": "pending_mirror",
+        "filename": null,
+        "sha256": null,
+        "domestic_urls": [],
+        "official_url": "https://www.python.org/downloads/windows/",
+        "license": "Python Software Foundation License",
+        "license_url": "https://docs.python.org/3/license.html",
+        "source_url": "https://github.com/python/cpython"
+      },
+      "install": {
+        "type": "exe",
+        "requires_admin": false,
+        "arguments": ["/quiet", "InstallAllUsers=0", "PrependPath=1", "Include_launcher=1"]
+      }
+    },
+    {
+      "id": "audiveris",
+      "display_name": "Audiveris",
+      "version": "5.11.0",
+      "override_env": "AUDIVERIS_EXE",
+      "detect": {
+        "command_names": ["Audiveris.exe", "audiveris"],
+        "candidate_paths": ["{PROGRAMFILES}/Audiveris/Audiveris.exe"],
+        "version_args": ["-version"],
+        "version_pattern": "5\\.11\\.0"
+      },
+      "package": {
+        "source_status": "pending_mirror",
+        "filename": null,
+        "sha256": null,
+        "domestic_urls": [],
+        "official_url": "https://github.com/Audiveris/audiveris/releases",
+        "license": "GNU Affero General Public License v3",
+        "license_url": "https://github.com/Audiveris/audiveris/blob/master/LICENSE",
+        "source_url": "https://github.com/Audiveris/audiveris/tree/5.11.0"
+      },
+      "install": {
+        "type": "msi",
+        "requires_admin": true,
+        "arguments": ["/qn", "/norestart"]
+      }
+    },
+    {
+      "id": "musescore",
+      "display_name": "MuseScore Studio 4",
+      "version": "4.7.4",
+      "override_env": "MUSESCORE_EXE",
+      "detect": {
+        "command_names": ["MuseScore4.exe", "MuseScore4", "mscore"],
+        "candidate_paths": [
+          "{PROGRAMFILES}/MuseScore 4/bin/MuseScore4.exe",
+          "{PROGRAMFILES}/MuseScore Studio 4/bin/MuseScore4.exe"
+        ],
+        "version_args": ["--version"],
+        "version_pattern": "4\\.7\\.4"
+      },
+      "package": {
+        "source_status": "pending_mirror",
+        "filename": null,
+        "sha256": null,
+        "domestic_urls": [],
+        "official_url": "https://musescore.org/en/download",
+        "license": "GNU General Public License v3",
+        "license_url": "https://github.com/musescore/MuseScore/blob/main/LICENSE.txt",
+        "source_url": "https://github.com/musescore/MuseScore"
+      },
+      "install": {
+        "type": "msi",
+        "requires_admin": true,
+        "arguments": ["/qn", "/norestart"]
+      }
+    },
+    {
+      "id": "pdftoppm",
+      "display_name": "Poppler pdftoppm",
+      "version": "26.05.0",
+      "override_env": "PDFTOPPM_EXE",
+      "detect": {
+        "command_names": ["pdftoppm.exe", "pdftoppm"],
+        "candidate_paths": [
+          "{INSTALL_ROOT}/pdftoppm/{VERSION}/Library/bin/pdftoppm.exe",
+          "{INSTALL_ROOT}/pdftoppm/{VERSION}/bin/pdftoppm.exe"
+        ],
+        "version_args": ["-v"],
+        "version_pattern": "26\\.05\\.0"
+      },
+      "package": {
+        "source_status": "pending_mirror",
+        "filename": null,
+        "sha256": null,
+        "domestic_urls": [],
+        "official_url": "https://poppler.freedesktop.org/",
+        "license": "PENDING_WINDOWS_BUILD_LICENSE_REVIEW",
+        "license_url": "https://gitlab.freedesktop.org/poppler/poppler/-/blob/master/COPYING",
+        "source_url": "https://gitlab.freedesktop.org/poppler/poppler"
+      },
+      "install": {
+        "type": "zip",
+        "requires_admin": false,
+        "arguments": []
+      }
+    }
+  ]
+}

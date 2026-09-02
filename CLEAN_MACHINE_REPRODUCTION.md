@@ -9,10 +9,10 @@ If a new user clones only the proposed open-source repository onto a clean Windo
 
 - Clone the future frozen/tagged repository, not the current `origin/main` as it exists on the audit date.
 - Confirm these tracked resources exist:
-  - `.agents/skills/orchestral-score-rebuild/SKILL.md`
-  - `.agents/skills/orchestral-score-rebuild/references/qa-protocol.md`
-  - `.agents/skills/orchestral-score-rebuild/references/successful-run-procedure.md`
-  - `.agents/skills/orchestral-score-rebuild/assets/QA_REPORT_TEMPLATE.md`
+  - `.agents/skills/focused-score-rebuild/SKILL.md`
+  - `.agents/skills/focused-score-rebuild/references/qa-protocol.md`
+  - `.agents/skills/focused-score-rebuild/references/successful-run-procedure.md`
+  - `.agents/skills/focused-score-rebuild/assets/QA_REPORT_TEMPLATE.md`
   - all referenced Skill/helper/QA scripts
   - a complete Python requirements lock
   - MusicXML schema provenance/fetch instructions or legally redistributable schema files
@@ -78,7 +78,7 @@ Current observed versions are documented in `EXECUTION_DEPENDENCY_AUDIT.md`. Ins
 
 ## 5. Required Skill and project instructions
 
-- Runtime: project-local `orchestral-score-rebuild` and its referenced procedure/QA resources.
+- Runtime: project-local `focused-score-rebuild` and its referenced procedure/QA resources.
 - Development-only: `skill-creator` if maintainers want to edit the Skill; it is not needed to run an already tracked Skill.
 - No user-global Skill is required.
 - No separate PDF, MuseScore, MusicXML, OMR, or QA Skill was historically required.

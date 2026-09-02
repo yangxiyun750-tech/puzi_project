@@ -1,0 +1,4 @@
+interface:
+  display_name: "Focused Score Rebuild"
+  short_description: "Rebuild clear melody, voice-piano, and basic band scores"
+  default_prompt: "Use $focused-score-rebuild to check this printed PDF for eligibility, classify it by a short QA dialogue, reconstruct supported notation, guide uncertain measures, and export validated editable MuseScore and MusicXML sources plus PDF."

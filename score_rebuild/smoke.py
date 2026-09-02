@@ -71,7 +71,7 @@ def run_smoke_test(*, keep_workdir: bool = False) -> tuple[int, Path | None]:
         return 1, None
     print("[PASS] Synthetic fixture passed pinned MusicXML 4.0 XSD validation.")
 
-    invariant_script = root / ".agents" / "skills" / "orchestral-score-rebuild" / "scripts" / "musicxml_invariants.py"
+    invariant_script = root / ".agents" / "skills" / "focused-score-rebuild" / "scripts" / "musicxml_invariants.py"
     ok, output = _run([sys.executable, str(invariant_script), "--self-test"], timeout=30)
     if not ok:
         print(f"[FAIL] MusicXML invariant self-test failed: {output}")
