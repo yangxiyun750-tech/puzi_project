@@ -57,4 +57,4 @@ Build both the generic Skill ZIP and the ZCode marketplace ZIP from the same can
 python tools/build_agent_packages.py --output-dir dist
 ```
 
-The builder writes deterministic archives plus `dist/SHA256SUMS.json`. Generated packages remain untracked. Because the repository currently declares no project license, the archives are marked `UNLICENSED` and are for internal evaluation only; do not publish them until the project license is chosen.
+The builder writes deterministic archives plus `dist/SHA256SUMS.json`. Generated packages remain untracked. Both archives include the repository `LICENSE`, and plugin metadata declares `AGPL-3.0-only`. Third-party binaries and private score materials are never bundled.

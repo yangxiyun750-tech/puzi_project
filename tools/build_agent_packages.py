@@ -15,10 +15,8 @@ SKILL_ID = "focused-score-rebuild"
 CANONICAL = ROOT / ".agents" / "skills" / SKILL_ID
 VERSION = "0.1.0"
 ZIP_TIME = (2020, 1, 1, 0, 0, 0)
-PACKAGE_NOTICE = """This repository does not declare a project license.
-This archive is for internal evaluation only and grants no redistribution rights.
-Third-party binaries and score files are not included.
-"""
+LICENSE_ID = "AGPL-3.0-only"
+LICENSE_FILE = ROOT / "LICENSE"
 
 
 def zip_tree(source: Path, destination: Path) -> None:
@@ -38,6 +36,8 @@ def sha256(path: Path) -> str:
 def build(output_dir: Path) -> dict[str, str]:
     if not (CANONICAL / "SKILL.md").is_file():
         raise FileNotFoundError(f"Canonical Skill is missing: {CANONICAL}")
+    if not LICENSE_FILE.is_file():
+        raise FileNotFoundError(f"Repository license is missing: {LICENSE_FILE}")
     output_dir = output_dir.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
     skill_zip = output_dir / f"{SKILL_ID}-skill-{VERSION}.zip"
@@ -47,7 +47,7 @@ def build(output_dir: Path) -> dict[str, str]:
         temp = Path(temp_name)
         generic_root = temp / "generic"
         shutil.copytree(CANONICAL, generic_root / SKILL_ID)
-        (generic_root / "PACKAGE_NOTICE.txt").write_text(PACKAGE_NOTICE, encoding="utf-8")
+        shutil.copy2(LICENSE_FILE, generic_root / "LICENSE")
         zip_tree(generic_root, skill_zip)
 
         market_root = temp / "zcode-marketplace"
@@ -58,14 +58,14 @@ def build(output_dir: Path) -> dict[str, str]:
             "name": SKILL_ID,
             "version": VERSION,
             "description": "Human-guided reconstruction of clear melody, voice-piano, and basic concert-band scores.",
-            "license": "UNLICENSED",
+            "license": LICENSE_ID,
             "keywords": ["musicxml", "musescore", "audiveris", "omr", "sheet-music"],
             "skills": "skills",
         }
         (plugin_root / ".zcode-plugin" / "plugin.json").write_text(
             json.dumps(plugin_manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )
-        (plugin_root / "PACKAGE_NOTICE.txt").write_text(PACKAGE_NOTICE, encoding="utf-8")
+        shutil.copy2(LICENSE_FILE, plugin_root / "LICENSE")
         marketplace = {
             "name": "score-rebuild-mainland",
             "description": "Local marketplace for the focused score rebuild Skill.",

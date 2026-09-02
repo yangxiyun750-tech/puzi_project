@@ -7,6 +7,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -28,12 +29,35 @@ class SkillContractTests(unittest.TestCase):
     def test_name_and_manifest_resources(self) -> None:
         first_lines = (SKILL / "SKILL.md").read_text(encoding="utf-8").splitlines()[:5]
         self.assertIn("name: focused-score-rebuild", first_lines)
+        self.assertIn("license: AGPL-3.0-only", first_lines)
         manifest = json.loads((ROOT / "score-rebuild-manifest.json").read_text(encoding="utf-8"))
+        self.assertEqual(manifest["project"]["license"], "AGPL-3.0-only")
         entry = manifest["required_internal_skills"][0]
         self.assertEqual(entry["name"], "focused-score-rebuild")
         self.assertTrue((ROOT / entry["path"]).is_file())
         for resource in entry["resources"]:
             self.assertTrue((ROOT / resource).is_file(), resource)
+
+    def test_packages_are_licensed_and_exclude_private_scores(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            subprocess.run(
+                [sys.executable, str(ROOT / "tools" / "build_agent_packages.py"),
+                 "--output-dir", directory],
+                check=True, capture_output=True, text=True, encoding="utf-8",
+            )
+            archives = sorted(Path(directory).glob("*.zip"))
+            self.assertEqual(len(archives), 2)
+            for archive_path in archives:
+                with zipfile.ZipFile(archive_path) as archive:
+                    names = archive.namelist()
+                    self.assertTrue(any(name.endswith("LICENSE") for name in names))
+                    self.assertFalse(any(name.endswith("PACKAGE_NOTICE.txt") for name in names))
+                    self.assertFalse(any(name.lower().endswith((".pdf", ".mscz", ".musicxml", ".mxl", ".omr"))
+                                         for name in names))
+                    plugin_names = [name for name in names if name.endswith(".zcode-plugin/plugin.json")]
+                    if plugin_names:
+                        plugin = json.loads(archive.read(plugin_names[0]))
+                        self.assertEqual(plugin["license"], "AGPL-3.0-only")
 
 
 class MetadataAndCatalogTests(unittest.TestCase):

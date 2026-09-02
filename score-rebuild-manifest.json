@@ -3,6 +3,7 @@
   "project": {
     "name": "ScoreRebuild",
     "version": "0.1.0-candidate",
+    "license": "AGPL-3.0-only",
     "freeze_status": "not_frozen",
     "platforms": ["Windows 10", "Windows 11"],
     "python": ">=3.12,<3.13"

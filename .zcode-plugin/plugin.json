@@ -2,6 +2,7 @@
   "name": "ai-score-toolkit",
   "version": "0.1.0",
   "description": "Project-level plugin for AI-assisted score reconstruction, editing, and QA.",
+  "license": "AGPL-3.0-only",
   "skills": [
     ".zcode/skills"
   ],

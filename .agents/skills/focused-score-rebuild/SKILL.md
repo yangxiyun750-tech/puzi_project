@@ -1,5 +1,6 @@
 ---
 name: focused-score-rebuild
+license: AGPL-3.0-only
 description: Reconstruct clear printed sheet-music PDFs as editable MuseScore notation for monophonic parts, solo voice with basic piano accompaniment, and basic concert-band scores, with human QA, optional transposition, and local question-driven library classification. Do not use for handwritten/draft, blurry, incomplete, photographically distorted, orchestral, or highly complex notation.
 ---
 
